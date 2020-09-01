@@ -23,7 +23,7 @@ int main()
 	if(button_fd<0)
 	{
 		printf("open error!\n");
-		return 0
+		return 0;
 	}
 	led_fd = open("/sys/class/leds/red_led/trigger",O_RDWR);
 	if(led_fd < 0)
