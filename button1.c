@@ -23,11 +23,14 @@ int main()
 	if(button_fd<0)
 	{
 		printf("open error!\n");
+		return 0
 	}
 	led_fd = open("/sys/class/leds/red_led/trigger",O_RDWR);
 	if(led_fd < 0)
         {
                 printf("Open led device faild!\n");
+                close(button_fd);
+                return 0;
         }
 	while(1)
 	{	
@@ -47,6 +50,7 @@ int main()
         }
         close(button_fd);
         close(led_fd);
-        return 0;
+        
+        
 }
 
