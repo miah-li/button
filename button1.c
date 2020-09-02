@@ -50,7 +50,7 @@ int main()
         }
         close(button_fd);
         close(led_fd);
-        
+        return 0;
         
 }
 
