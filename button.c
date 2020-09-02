@@ -22,6 +22,7 @@ int main()
 	if(fd<0)
 	{
 		printf("open error!\n");
+		return 0;
 	}
 	while(1)
 	{	
